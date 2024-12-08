@@ -1,0 +1,173 @@
+/* Container for the product list */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+  gap: 20px; /* Space between the products */
+  padding: 20px;
+  width: 100%; /* Full width of the container */
+  max-width: 2000px; /* Max width to limit the container size */
+  margin: 0 auto; /* Center the grid within the parent */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Responsive Design */
+/* Styles for laptops (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on laptops */
+    gap: 15px; /* Adjust space between items */
+    padding: 15px;
+  }
+}
+
+/* Styles for tablets (768px and below) */
+@media screen and (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    gap: 10px; /* Adjust space between items */
+    padding: 10px;
+  }
+}
+
+/* Styles for mobile screens (480px and below) */
+@media screen and (max-width: 480px) {
+  .product-list {
+    grid-template-columns: 1fr; /* 1 column on mobile screens */
+    gap: 20px; /* Adjust space between items */
+    padding: 10px 0px;
+  }
+}
+
+/* Styles for each product card */
+.product-card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure the card takes up full width of the grid column */
+  margin: 0 auto; /* Ensure the card is centered if any extra space exists */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack child elements vertically */
+}
+
+/* Header styles */
+.product-card__header {
+  position: relative;
+  padding: 20px;
+}
+
+/* Sale badge styles */
+.product-card__sale {
+  background-color: #333;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-top-left-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+}
+
+/* Image container styles */
+.product-card__image-container {
+  padding: 0; /* Remove padding if it adds extra space */
+  margin: 0; /* Remove margin if it adds extra space */
+}
+
+/* Image styles */
+.product-card__image {
+  width: 100%;
+  height: auto; /* Allow the height to adjust automatically */
+  aspect-ratio: 1/1; /* Adjust this ratio to your desired aspect ratio */
+  object-fit: cover; /* Ensure the image covers the area while maintaining its aspect ratio */
+  border-radius: 10px;
+  display: block; /* Ensure image is displayed as a block element */
+}
+
+/* Body styles */
+.product-card__body {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allow body to take up remaining space */
+}
+
+/* Title and rating container styles */
+.product-card__title-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the start of the flex container */
+  margin-bottom: 6px;
+}
+
+/* Title styles */
+.product-card__title {
+  font-size: 14px;
+  margin: 0 0 6px; /* Margin below the title */
+  color: #333;
+  line-height: 1.2em; /* Adjust line height */
+  max-height: 2.4em; /* Space for up to two lines of text */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Show ellipsis if text overflows */
+  display: -webkit-box; /* Use webkit-box model */
+  -webkit-line-clamp: 2; /* Limit text to two lines */
+  -webkit-box-orient: vertical; /* Vertical orientation for webkit-box */
+  white-space: normal; /* Allow text to wrap to the next line */
+}
+
+/* Rating styles */
+.product-card__rating {
+  display: flex;
+  align-items: flex-start; /* Align rating to the top */
+  margin-left: 5px;
+}
+
+/* Star styles */
+.product-card__star {
+  color: #ffc107;
+  font-size: 16px;
+  margin-left: 3px;
+}
+
+/* Price styles */
+.product-card__price {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* New price styles */
+.product-card__price-new {
+  font-size: 16px;
+  font-weight: normal;
+  display: block;
+  color: #333;
+}
+
+/* Old price styles */
+.product-card__price-old {
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #999;
+  display: block;
+}
+
+/* Button styles */
+.product-card__button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* Button hover styles */
+.product-card__button:hover {
+  background-color: #494949;
+}

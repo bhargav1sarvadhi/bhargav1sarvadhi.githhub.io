@@ -1,0 +1,37 @@
+.product-detail-page {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid #ddd; /* Light border */
+  padding: 15px;
+}
+
+.info-section {
+   /* Each section takes 50% of the width */
+  height: calc(50vw * 0.775); /* Set height based on width, for example, 1:0.8 ratio */
+  overflow: hidden;
+}
+
+.info-section {
+  overflow-y: auto; /* Enable scrolling for the InfoSection */
+}
+
+@media (max-width: 768px) {
+  .product-detail-page {
+    flex-direction: column; /* Stack the sections on top of each other in mobile view */
+    padding: 15px 0px;
+  }
+
+  .photo-section,
+  .info-section {
+    width: 100%; /* Each section takes 100% of the width on mobile */
+    height: auto; /* Allow the height to adjust based on content */
+  }
+
+  .info-section {
+    overflow-y: auto; /* Enable scrolling for the InfoSection */
+  }
+}

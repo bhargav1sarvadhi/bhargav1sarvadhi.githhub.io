@@ -1,0 +1,105 @@
+
+.product-card {
+  background-color: #fff; /* White background */
+  color: #333; /* Darker text color for contrast */
+  border-radius: 10px; /* Radius for the overall box */
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow effect */
+  width: 300px;
+  margin: 20px auto;
+}
+
+.product-card__header {
+  position: relative;
+  padding: 10px; /* Padding around the image */
+}
+
+.product-card__sale {
+  background-color: #333; /* Bright color for the sale tag */
+  color: #ffffff;
+  padding: 5px 10px;
+  border-top-left-radius: 10px; /* Rounded upper-left corner */
+  position: absolute;
+  top: 0; /* Aligns to the very top */
+  left: 0; /* Aligns to the very left */
+  font-size: 12px; /* Reduced font size */
+  font-weight: normal; /* Normal font weight */
+}
+
+.product-card__image-container {
+  padding: 15px; /* Padding around the image */
+}
+
+.product-card__image {
+  width: 100%; /* Full width within the container */
+  height: 250px; /* Fixed height for image */
+  object-fit: cover; /* Ensures the image covers the container */
+  border-radius: 10px; /* Radius for the image */
+}
+
+.product-card__body {
+  padding: 20px; /* Padding around the content */
+}
+
+.product-card__title-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px; /* Space between title and rating */
+}
+
+.product-card__title {
+  font-size: 14px; /* Reduced font size for the title */
+  font-weight: normal; /* Normal font weight */
+  margin: 0;
+  color: #333; /* Darker text color */
+}
+
+.product-card__rating {
+  display: flex;
+  align-items: center;
+  margin-left: 3px;
+}
+
+.product-card__star {
+  color: #ffc107;
+  font-size: 16px; /* Reduced font size for the star */
+  margin-left: 3px;
+}
+
+.product-card__price {
+  margin-bottom: 8px; /* Space below price */
+  color: #333; /* Darker text color */
+}
+
+.product-card__price-new {
+  font-size: 16px; /* Reduced font size for the new price */
+  font-weight: normal; /* Normal font weight */
+  display: block; /* Ensures the new price takes up its own line */
+  color: #333; /* Darker text color */
+}
+
+.product-card__price-old {
+  font-size: 12px; /* Font size for the old price */
+  text-decoration: line-through;
+  color: #999; /* Lighter color for the old price */
+  display: block; /* Ensures the old price is below the new price */
+}
+
+.product-card__button {
+  background-color: #333; /* Blue button color */
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 10px; /* Radius for the button */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Full width for the button */
+  font-size: 14px; /* Font size for the button */
+  font-weight: normal; /* Normal font weight */
+}
+
+.product-card__button:hover {
+  background-color:    #494949;
+  ; /* Darker blue on hover */
+}

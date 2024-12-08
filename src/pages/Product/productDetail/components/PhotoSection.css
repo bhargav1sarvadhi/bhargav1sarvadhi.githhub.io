@@ -1,0 +1,199 @@
+/* Desktop View */
+.photo-section-desktop {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+}
+
+.images-column-desktop {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.thumbnail-wrapper {
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.thumbnail-wrapper.selected {
+  border-color: #000;
+  padding: 5px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.carousel-zoom-container-desktop {
+  width: 80%;
+  position: relative;
+}
+
+.carousel-column {
+  width: 100%;
+  position: relative;
+  cursor: crosshair;
+}
+
+.carousel-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow-prev {
+  left: 10px;
+}
+
+.carousel-arrow-next {
+  right: 10px;
+}
+
+.zoom-indicator {
+  position: absolute;
+  border: 2px solid #ff0000;
+  background-color: rgba(255, 0, 0, 0.2);
+  pointer-events: none;
+  z-index: 9;
+  display: none;
+}
+
+  .zoom-result {
+    position: absolute;
+    top: 0;
+    left: 105%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1; 
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /* Same size as carousel */
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 10;
+  }
+
+.zoom-result.visible {
+  display: block;
+}/* Mobile View *//* Mobile View */
+@media (max-width: 768px) {
+  .photo-section-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .carousel-container-mobile {
+    width: 100%;
+    position: relative;
+    padding: 0px 10px;
+  }
+
+  .carousel-image-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+  }
+
+  .zoomed-image {
+    background-size: cover; /* Ensures it fits the container */
+  }
+
+  .carousel-arrow-mobile {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-arrow-prev-mobile {
+    left: 10px;
+  }
+
+  .carousel-arrow-next-mobile {
+    right: 10px;
+  }
+
+  .images-row-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .thumbnail-wrapper-mobile {
+    width: calc(25% - 10px);
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+  }
+
+  .thumbnail-mobile {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  .thumbnail-wrapper-mobile.selected {
+    border-color: #000;
+    padding: 2px;
+  }
+}
+
+/* Desktop View */
+.photo-section-desktop .zoomed-image {
+  background-size: cover; /* Ensures it fits the container */
+}
